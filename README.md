@@ -1,7 +1,7 @@
 # DynaMeth.jl
 
 DynaMeth.jl is a Julia package developed as part of my PhD thesis on dynamic reactor operation for methanol synthesis.
-It provides the core functions used to generate the results presented in the following publications.
+It provides the core functions used to generate the results presented in the following publications:
 
 - **Leipold, J., C. Seidel, D. Nikolic, A. Seidel-Morgenstern, and A. Kienle..** *Optimization of Methanol Synthesis under Forced Periodic Operation in Isothermal Fixed-Bed Reactors.* Computers & Chemical Engineering 175 (July 2023): 108285. https://doi.org/10.1016/j.compchemeng.2023.108285.
 
