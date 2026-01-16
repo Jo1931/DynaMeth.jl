@@ -42,7 +42,24 @@ Depending on the chosen kinetic model and numerical methods, the package can be 
 
 ### Parameter Estimation
 
-tbd
+A minimal example demonstrating how the reactor is generated and how model outputs are compared with experimental data is shown below.
+
+```julia
+using DynaMeth
+using Plots
+
+#Load Experimental Data
+xin, xout = createSteadyStates("Volllbrecht")
+dynamic = DynamicVollbrecht()
+
+#Setup Reactor
+vollbrecht = SetupVollbrecht(xin_mess=xin, xout_mess=xout, kinetic=Seidel(), files=dynamic)
+cstr = Reactor(vollbrecht)
+
+#Plot Simulation Results
+plotReactorSteady(cstr)
+plotDynamicVollbrecht(cstr)
+```
 
 ### Bifurcation Analysis
 
