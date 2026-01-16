@@ -5,7 +5,7 @@ It provides the core functions used to generate the results presented in the fol
 
 - **Leipold, J., C. Seidel, D. Nikolic, A. Seidel-Morgenstern, and A. Kienle..** *Optimization of Methanol Synthesis under Forced Periodic Operation in Isothermal Fixed-Bed Reactors.* Computers & Chemical Engineering 175 (July 2023): 108285. https://doi.org/10.1016/j.compchemeng.2023.108285.
 
-- **Leipold, J., D. Nikolic, A. Seidel-Morgenstern, and A. Kienle.** *Multi-Objective Optimization of Forced Periodic Operation of Methanol Synthesis in a Fixed-Bed Reactor.* In 34th European Symposium on Computer Aided Process Engineering (July 2024). https://doi.org/10.1016/B978-0-443-28824-1.50268-4.
+- **Leipold, J., D. Nikolic, A. Seidel-Morgenstern, and A. Kienle.** *Multi-Objective Optimization of Forced Periodic Operation of Methanol Synthesis in a Fixed-Bed Reactor.* In 34th European Symposium on Computer Aided Process Engineering (June 2024). https://doi.org/10.1016/B978-0-443-28824-1.50268-4.
 
 - **Leipold, J., M. Jung, T. Keßler, and A. Kienle.** *Nonlinear Behavior of Methanol Synthesis Compared to CO2 Methanation.* Chemical Engineering & Technology 47, no. 3 (November 2024): 531–36. https://doi.org/10.1002/ceat.202300256.
 
@@ -60,15 +60,16 @@ cstr = Reactor(vollbrecht)
 plotReactorSteady(cstr)
 plotDynamicVollbrecht(cstr)
 ```
-A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). The code can be used to reproduce the results in [Kortuz et al. (2025)](https://doi.org/10.1016/j.cej.2025.164505).
+A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). The code can be used to reproduce the results in Kortuz et al. ([August 2025](https://doi.org/10.1016/j.cej.2025.164505)).
 
 ### Bifurcation Analysis
 
-tbd
+Leipold et al. ([November 2024](https://doi.org/10.1002/ceat.202300256), [October 2025](https://doi.org/10.1016/j.cej.2025.167176))
 
 ### Forced periodic Operation
 
-tbd
+Leipold et al. ([July 2023](https://doi.org/10.1016/j.compchemeng.2023.108285), [June 2024](https://doi.org/10.1016/B978-0-443-28824-1.50268-4), [May 2025](https://doi.org/10.1016/j.cej.2025.167176))
+Kaps et al. ([December 2025](https://doi.org/10.1002/cctc.202501403)) 
 
 ### Nonlinear Model Predictive Control
 
@@ -77,7 +78,7 @@ tbd
 ## Scope
 
 This package contains the core models and methods for dynamic reactor simulation and optimization used in the associated research.
-Scripts for reproducing specific figures and results are provided in separate repositories corresponding to the individual journal publications.
+Scripts for reproducing specific figures and results will be provided in separate repositories corresponding to the individual journal publications.
 
 ## Status 
 
