@@ -1,11 +1,25 @@
 # DynaMeth.jl
 
 DynaMeth.jl is a Julia package developed as part of my PhD thesis on dynamic reactor operation for methanol synthesis.
-It provides the core functions used to generate the results presented in my journal publications.
+It provides the core functions used to generate the results presented in the following publications.
+
+- **Leipold, J., C. Seidel, D. Nikolic, A. Seidel-Morgenstern, and A. Kienle..** *Optimization of Methanol Synthesis under Forced Periodic Operation in Isothermal Fixed-Bed Reactors.* Computers & Chemical Engineering 175 (July 2023): 108285. https://doi.org/10.1016/j.compchemeng.2023.108285.
+
+- **Leipold, J., D. Nikolic, A. Seidel-Morgenstern, and A. Kienle.** *Multi-Objective Optimization of Forced Periodic Operation of Methanol Synthesis in a Fixed-Bed Reactor.* In 34th European Symposium on Computer Aided Process Engineering (July 2024). https://doi.org/10.1016/B978-0-443-28824-1.50268-4.
+
+- **Leipold, J., M. Jung, T. Keßler, and A. Kienle.** *Nonlinear Behavior of Methanol Synthesis Compared to CO2 Methanation.* Chemical Engineering & Technology 47, no. 3 (November 2024): 531–36. https://doi.org/10.1002/ceat.202300256.
+
+- **Leipold, J., D. Nikolic, A. Seidel-Morgenstern, and A. Kienle.** *Optimization of Methanol Synthesis under Forced Periodic Operation in a Non-Isothermal Fixed-Bed Reactor.* Computers & Chemical Engineering 196 (May 2025): 109040. https://doi.org/10.1016/j.compchemeng.2025.109040.
+
+- **Kortuz, W., J. Leipold, A. Kienle, and A. Seidel-Morgenstern.** *Kinetic Modeling of the Methanol-Assisted Autocatalytic Methanol Synthesis on Cu/ZnO/Al2O3.* Chemical Engineering Journal 518, (August 2025): 164505. https://doi.org/10.1016/j.cej.2025.164505.
+
+- **Leipold, J., and A. Kienle.** *Nonlinear Behavior of Methanol Synthesis through CO2-Hydrogenation.* Chemical Engineering Journal 522 (October 2025): 167176. https://doi.org/10.1016/j.cej.2025.167176.
+
+- **Kaps, L., W. Kortuz, J. Leipold, et al.** *Forced Periodic Reactor Operation Applied to Methanol Synthesis.* ChemCatChem n/a, no. n/a (n.d.): e01403. https://doi.org/10.1002/cctc.202501403.
 
 ## Installation
 
-Once registered, the package can be installed via:
+The package can be installed via:
 ```julia
 using Pkg
 Pkg.add(url="https://github.com/Jo1931/DynaMeth.jl")
