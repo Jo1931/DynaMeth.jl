@@ -1,0 +1,23 @@
+mutable struct FPO
+    obj1
+    obj2
+    isothermal
+    n
+    ordn
+    m
+    ordm
+    sol
+    nall
+    mall
+    setMfcCons
+    inert
+    setObjective
+    signal
+    bounds
+    predictor
+    optimize
+    N2
+    numP
+    optimize_temperature
+    inputs
+end

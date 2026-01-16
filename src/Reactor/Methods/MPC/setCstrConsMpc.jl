@@ -1,0 +1,15 @@
+function setCstrConsMpc(model, xt, y, n_i, reac::Reactor)
+
+    RHS = calcRHSJumpMpc(model, y, reac)
+    LHS = calcLHSJumpMpc(model, y, reac)
+    #@NLconstraint(model, xt[1] == 1)
+    #@NLconstraint(model, sum(LHS[1, i] * xt[i] for i = 1:6) == n_i[1] - y[8] * y[1])
+    @NLconstraint(model, sum(LHS[1, i] * xt[i] for i = 1:6) == n_i[1] - y[8] * y[1] + RHS[1])
+    @NLconstraint(model, sum(LHS[2, i] * xt[i] for i = 1:6) == n_i[2] - y[8] * y[2] + RHS[2])
+    @NLconstraint(model, sum(LHS[3, i] * xt[i] for i = 1:6) == n_i[3] - y[8] * y[3] + RHS[3])
+    @NLconstraint(model, sum(LHS[4, i] * xt[i] for i = 1:6) == n_i[4] - y[8] * y[4] + RHS[4])
+    @NLconstraint(model, sum(LHS[5, i] * xt[i] for i = 1:6) == n_i[5] - y[8] * y[5] + RHS[5])
+    @NLconstraint(model, sum(LHS[6, i] * xt[i] for i = 1:6) == n_i[6] - y[8] * y[6] + RHS[6])
+    @NLconstraint(model, xt[7] == RHS[7])
+    @NLconstraint(model, sum(LHS[8, i] * xt[i] for i = 1:6) + y[8] == n_i[8] + RHS[8])
+end
