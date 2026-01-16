@@ -60,7 +60,8 @@ cstr = Reactor(vollbrecht)
 plotReactorSteady(cstr)
 plotDynamicVollbrecht(cstr)
 ```
-A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl).
+A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). The code can be used to reproduce the results in [Kortuz et al. (2025)](https://doi.org/10.1016/j.cej.2025.164505).
+
 ### Bifurcation Analysis
 
 tbd
