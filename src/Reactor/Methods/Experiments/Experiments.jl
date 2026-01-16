@@ -17,7 +17,7 @@ function DynamicExp()
         files)
 end
 function DynamicVollbrecht()
-    return DataFrame(CSV.File("data/exp_pro/experiment.csv"))
+    return DataFrame(CSV.File("data/experiment.csv"))
 end
 mutable struct Experiments <: AbstractReactor
     xin_mess

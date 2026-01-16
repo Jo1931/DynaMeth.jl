@@ -27,7 +27,7 @@ function (res::ObjectiveSS)(x, cstr::T=cstr) where {T<:Union{Reactor,ComponentVe
     out = out .+ dyn * 50
 
     cstr.methods.xout_sim = xsim
-    res = out + regularization(u)
+    res = out #+ regularization(u)
 end
 #function (res::ObjectiveSS)(cstr::Reactor)
 #    experimental_set = cstr.methods.subset

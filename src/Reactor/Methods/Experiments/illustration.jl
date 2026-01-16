@@ -5,18 +5,32 @@ function plotReactorSteady(cstr::Reactor)
     sum(((xsim[1:3, :] - xmess[1:3, :])) .^ 2)
 
     p1 = scatter(xmess[1, :], xsim[1, :], label=false, title="CH3OH")#, markersize=1)
-    plot!([0, 1.1], [0, 1.1], label=false, xlims=(minimum(xmess[1, :] * 0) * 0.8, maximum(xmess[1, :]) * 1.1), ylims=(minimum(xmess[1, :] * 0) * 0.8, maximum(xmess[1, :]) * 1.1))
+    plot!([0, 1.1], [0, 1.1], label=false, c=:black, xlims=(minimum(xmess[1, :] * 0) * 0.8, maximum(xmess[1, :]) * 1.1), ylims=(minimum(xmess[1, :] * 0) * 0.8, maximum(xmess[1, :]) * 1.1))
     p2 = scatter(xmess[2, :], xsim[2, :], label=false, title="CO2")
-    plot!([0, 1.3], [0, 1.3], label=false, xlims=(minimum(xmess[2, :]) * 0.8, maximum(xmess[2, :]) * 1.1), ylims=(minimum(xmess[2, :]) * 0.8, maximum(xmess[2, :]) * 1.1))
+    plot!([0, 1.3], [0, 1.3], label=false, c=:black, xlims=(minimum(xmess[2, :]) * 0.8, maximum(xmess[2, :]) * 1.1), ylims=(minimum(xmess[2, :]) * 0.8, maximum(xmess[2, :]) * 1.1))
     p3 = scatter(xmess[3, :], xsim[3, :], label=false, title="CO")
-    plot!([0, 1.3], [0, 1.3], label=false, xlims=(minimum(xmess[3, :]) * 0.8, maximum(xmess[3, :]) * 1.1), ylims=(minimum(xmess[3, :]) * 0.8, maximum(xmess[3, :]) * 1.1))
+    plot!([0, 1.3], [0, 1.3], label=false, c=:black, xlims=(minimum(xmess[3, :]) * 0.8, maximum(xmess[3, :]) * 1.1), ylims=(minimum(xmess[3, :]) * 0.8, maximum(xmess[3, :]) * 1.1))
     p4 = scatter(xmess[4, :], xsim[4, :], label=false, title="H2")
-    plot!([0.3, 1.7], [0.3, 1.7], label=false, xlims=(minimum(xmess[4, :]) * 0.8, maximum(xmess[4, :]) * 1.1), ylims=(minimum(xmess[4, :]) * 0.8, maximum(xmess[4, :]) * 1.1))
+    plot!([0.3, 1.7], [0.3, 1.7], label=false, c=:black, xlims=(minimum(xmess[4, :]) * 0.8, maximum(xmess[4, :]) * 1.1), ylims=(minimum(xmess[4, :]) * 0.8, maximum(xmess[4, :]) * 1.1))
     p5 = scatter(xmess[5, :], xsim[5, :], label=false, title="H2O")
-    plot!([0.0, 0.115], [0.0, 0.115], label=false, xlims=(minimum(xmess[5, :]) * 0.8, maximum(xmess[5, :]) * 1.1), ylims=(minimum(xmess[5, :]) * 0.8, maximum(xmess[5, :]) * 1.1))
+    plot!([0.0, 0.115], [0.0, 0.115], c=:black, label=false, xlims=(minimum(xmess[5, :]) * 0.8, maximum(xmess[5, :]) * 1.1), ylims=(minimum(xmess[5, :]) * 0.8, maximum(xmess[5, :]) * 1.1))
     p6 = scatter(xmess[6, :], xsim[6, :], label=false, title="N2")
-    plot!([0.1, 1.5], [0.1, 1.5], label=false, xlims=(minimum(xmess[6, :]) * 0.8, maximum(xmess[6, :]) * 1.1), ylims=(minimum(xmess[6, :]) * 0.8, maximum(xmess[6, :]) * 1.1))
+    plot!([0.1, 1.5], [0.1, 1.5], c=:black, label=false, xlims=(minimum(xmess[6, :]) * 0.8, maximum(xmess[6, :]) * 1.1), ylims=(minimum(xmess[6, :]) * 0.8, maximum(xmess[6, :]) * 1.1))
     return plot(p1, p2, p3, p4, p5, p6)
+end
+function plotReactorSteady!(p, cstr::Reactor)
+    xsim, xmess = solveSS(cstr::Reactor)
+
+
+    sum(((xsim[1:3, :] - xmess[1:3, :])) .^ 2)
+
+    scatter!(p[1], xmess[1, :], xsim[1, :], c=:red, label=false, title="CH3OH")#, markersize=1)
+    scatter!(p[2], xmess[2, :], xsim[2, :], c=:red, label=false, title="CO2")
+    scatter!(p[3], xmess[3, :], xsim[3, :], c=:red, label=false, title="CO")
+    scatter!(p[4], xmess[4, :], xsim[4, :], c=:red, label=false, title="H2")
+    scatter!(p[5], xmess[5, :], xsim[5, :], c=:red, label=false, title="H2O")
+    scatter!(p[6], xmess[6, :], xsim[6, :], c=:red, label=false, title="N2")
+
 end
 
 function plotDynamic(cstr::Reactor, file)

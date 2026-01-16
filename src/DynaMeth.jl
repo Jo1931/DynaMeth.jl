@@ -19,7 +19,9 @@ using Ipopt
 using FileIO
 using Statistics
 using PGFPlotsX
-
+using Optimization
+using OptimizationOptimJL
+using Optim
 
 
 abstract type AbstractReactor end
@@ -56,8 +58,8 @@ function _run_scripts_in_subfolder(path; seen=Set{String}())
     end
 end
 
-_protected_sqrt(x::T) where {T} =# real.(sqrt.(Complex.(x)))
-    @inline myswish_0(x) = x / (1 + exp(-x))
+_protected_sqrt(x::T) where {T} = real.(sqrt.(Complex.(x)))
+@inline myswish_0(x) = x / (1 + exp(-x))
 @inline mysoftplus_0(x) = log(1 + exp(x))
 
 

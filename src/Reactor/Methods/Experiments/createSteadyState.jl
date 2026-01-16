@@ -142,7 +142,7 @@ function createSteadyStates()
 end
 function createSteadyStates(s::String)
 
-    data = DataFrame(CSV.File("data/exp_pro/Vollbrecht_Experiments_steady_state.csv"))
+    data = DataFrame(CSV.File("data/Vollbrecht_Experiments_steady_state.csv"))
     xin = Vector{Float64}[]
     xout = Vector{Float64}[]
     for i = 1:140
