@@ -60,7 +60,7 @@ cstr = Reactor(vollbrecht)
 plotReactorSteady(cstr)
 plotDynamicVollbrecht(cstr)
 ```
-
+A detailed, executable example on optimization is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl).
 ### Bifurcation Analysis
 
 tbd
