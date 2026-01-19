@@ -14,7 +14,7 @@ function (r::ReactionRatesSeidel)(y, T, Pe, beta, constants)
 
     ## reaction equilibrium constants Kp = 10^(A/T-B)
 
-    K_P1, K_P2, K_P3 = GGW_const(T)
+    K_P1, K_P2, K_P3 = GGW_Graaf(T)
 
     ## Partial pressures
 
