@@ -60,10 +60,26 @@ cstr = Reactor(vollbrecht)
 plotReactorSteady(cstr)
 plotDynamicVollbrecht(cstr)
 ```
-A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). The code can be used to reproduce the results in Kortuz et al. ([August 2025](https://doi.org/10.1016/j.cej.2025.164505)).
+A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). Kortuz et al. ([August 2025](https://doi.org/10.1016/j.cej.2025.164505)).
 
 ### Bifurcation Analysis
 
+```julia
+#Setup Reactor
+bifurcation = SetupBifurcationAnalysis(kinetic=Seidel())
+cstr = Reactor(bifurcation)
+
+#Temperature Range
+Tvec = 250:700
+Tc0 = 500   #cooling temperatur
+
+#Caculate Heat Removal/Production Curve
+hp, hr, sol = solveHeatCascade(Tvec, Tc0, cstr)
+
+#Plot
+plot_heat(hp, hr, Tvec, Tc0, cstr)
+```
+A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Bifurcation.jl).
 Leipold et al. ([November 2024](https://doi.org/10.1002/ceat.202300256), [October 2025](https://doi.org/10.1016/j.cej.2025.167176))
 
 ### Forced periodic Operation
