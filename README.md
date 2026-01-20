@@ -57,8 +57,9 @@ vollbrecht = SetupVollbrecht(xin_mess=xin, xout_mess=xout, kinetic=Seidel(), fil
 cstr = Reactor(vollbrecht)
 
 #Plot Simulation Results
-plotReactorSteady(cstr)
-plotDynamicVollbrecht(cstr)
+p1 = plotReactorSteady(cstr)
+p2 = plotDynamicVollbrecht(cstr)
+plot(p1,p2,size=(1200,400))
 ```
 A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). Kortuz et al. ([August 2025](https://doi.org/10.1016/j.cej.2025.164505)).
 
