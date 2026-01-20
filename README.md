@@ -65,6 +65,9 @@ A detailed example on parameter estimation is provided [here](https://github.com
 ### Bifurcation Analysis
 
 ```julia
+using DynaMeth
+using Plots
+
 #Setup Reactor
 bifurcation = SetupBifurcationAnalysis(kinetic=Seidel())
 cstr = Reactor(bifurcation)
