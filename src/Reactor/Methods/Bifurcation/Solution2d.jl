@@ -116,7 +116,7 @@ function plotEig8(sol::Solution_2d)
     plot(t, real.(eig8) * 1, label=false)
     plot!(t, imag.(eig8), label=false)
 end
-function plot_heat(hp1, hr1, cstr)
+function plot_heat(hp1, hr1, Tvec, Tc0, cstr)
     p1 = plot(ylabel="Heat in W",
         xlabel="Temperature in K",
         fontfamily="Computer Modern")
@@ -133,7 +133,8 @@ function plot_heat(hp1, hr1, cstr)
 
     end
     i = 1
-    plot!(Tvec, hr1[:, i], color=RGB(1, 1 - cc[i], 1 - cc[i]), linewidth=2, linestyle=:dash, label=false)
+    plot!(Tvec, hr1[:, i], color=RGB(1, 1 - cc[i], 1 - cc[i]), linewidth=2, linestyle=:dash, label=false, ylims=(minimum(hp1) * 0.95, maximum(hp1) * 1.05))
+    plot!([Tc0, Tc0], [minimum(hp1) - (maximum(hp1) - minimum(hp1)) * 0.05, maximum(hp1) + (maximum(hp1) - minimum(hp1)) * 0.05], color=RGB(1, 1 - cc[i], 1 - cc[i]), linewidth=2, linestyle=:dash, label=false, ylims=(minimum(hp1) - (maximum(hp1) - minimum(hp1)) * 0.05, maximum(hp1) + (maximum(hp1) - minimum(hp1)) * 0.05), framestyle=:box)
 end
 
 function YieldBranches(sol::Solution_2d)
