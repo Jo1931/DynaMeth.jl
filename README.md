@@ -61,6 +61,8 @@ p1 = plotReactorSteady(cstr)
 p2 = plotDynamicVollbrecht(cstr)
 plot(p1,p2,size=(1200,400))
 ```
+<img src="assets/experiments.png" alt="experiments" width="600">
+
 A detailed example on parameter estimation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Experiments.jl). Kortuz et al. ([August 2025](https://doi.org/10.1016/j.cej.2025.164505)).
 
 ### Bifurcation Analysis
@@ -83,6 +85,9 @@ hp, hr, sol = solveHeatCascade(Tvec, Tc0, cstr)
 #Plot
 plot_heat(hp, hr, Tvec, Tc0, cstr)
 ```
+<img src="assets/heat.png" alt="heat" width="300">
+
+
 A detailed example on parameter bifurcation analysis is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Bifurcation.jl).
 Leipold et al. ([November 2024](https://doi.org/10.1002/ceat.202300256), [October 2025](https://doi.org/10.1016/j.cej.2025.167176))
 
