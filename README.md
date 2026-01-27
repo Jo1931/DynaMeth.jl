@@ -93,12 +93,38 @@ Leipold et al. ([November 2024](https://doi.org/10.1002/ceat.202300256), [Octobe
 
 ### Forced periodic Operation
 
+```julia
+using DynaMeth
+
+fpo = SetupFpoCstr(n=50, ordn=2, numP=40, N2=0.15, kinetic=SeidelJump(), properties=SetupVollbrecht(), optimize_temperature=false, isothermal=true)
+cstr = Reactor(fpo)
+
+#Set properties
+cstr.properties.Tc = 230 + 273.15
+cstr.properties.Tin = 230 + 273.15
+
+#Input signal
+cstr.methods.signal = x -> sig(x)
+
+#Objective
+cstr.methods.setObjective = 1
+
+#Solve optimization problem
+init = cstr.methods.predictor(cstr, 1)
+model = optimizeCSTR(init, 0.0, cstr, sca=1000.0, max_iter=300)
+cstr.methods.sol(model, 1)
+
+print("Objective 1: "*string(cstr.methods.sol.obj1[1])*"\n")
+print("Objective 2: "*string(cstr.methods.sol.obj2[1]))
+
+```
+
 Leipold et al. ([July 2023](https://doi.org/10.1016/j.compchemeng.2023.108285), [June 2024](https://doi.org/10.1016/B978-0-443-28824-1.50268-4), [May 2025](https://doi.org/10.1016/j.cej.2025.167176))
 Kaps et al. ([December 2025](https://doi.org/10.1002/cctc.202501403)) 
 
 ### Nonlinear Model Predictive Control
 
-tbd
+
 
 ## Scope
 
