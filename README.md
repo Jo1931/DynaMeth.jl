@@ -67,6 +67,8 @@ A detailed example on parameter estimation is provided [here](https://github.com
 
 ### Bifurcation Analysis
 
+A minimal example for bifurcation analysis using heat removal and heat production curves is shown below.
+
 ```julia
 using DynaMeth
 using Plots
@@ -88,10 +90,12 @@ plot_heat(hp, hr, Tvec, Tc0, cstr)
 <img src="assets/heat.png" alt="heat" width="300">
 
 
-A detailed example on parameter bifurcation analysis is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Bifurcation.jl).
+A detailed example on bifurcation analysis is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/Bifurcation.jl).
 Leipold et al. ([November 2024](https://doi.org/10.1002/ceat.202300256), [October 2025](https://doi.org/10.1016/j.cej.2025.167176))
 
 ### Forced periodic Operation
+
+A minimal example showing how to define the reactor to study a forced periodic operation is shown below.
 
 ```julia
 using DynaMeth
@@ -118,13 +122,13 @@ print("Objective 1: "*string(cstr.methods.sol.obj1[1])*"\n")
 print("Objective 2: "*string(cstr.methods.sol.obj2[1]))
 
 ```
-
+A detailed example on forced periodic operation is provided [here](https://github.com/Jo1931/DynaMeth.jl/blob/master/examples/FPO.jl).
 Leipold et al. ([July 2023](https://doi.org/10.1016/j.compchemeng.2023.108285), [June 2024](https://doi.org/10.1016/B978-0-443-28824-1.50268-4), [May 2025](https://doi.org/10.1016/j.cej.2025.167176))
 Kaps et al. ([December 2025](https://doi.org/10.1002/cctc.202501403)) 
 
 ### Nonlinear Model Predictive Control
 
-
+tbd
 
 ## Scope
 
