@@ -78,7 +78,7 @@ function optimizeCSTR(init, epsilon, cstr; sca=100.0, max_iter=300)
     end
     for i = 2:cstr.methods.nall
         xin = [xin1[i], xin2[i], xin3[i], xin4[i], xin5[i], xin6[i], 0, xin8[i], xin9[i], xin10[i]]
-        setCstrCons(model, dxt[:, i, 1], x[:, i, 1], xin, cstr::Reactor)
+        setCstrCons(model, dxt[:, i, 1], x[:, i, 1], xin, cstr)
     end
 
     ## Imlet Constraints

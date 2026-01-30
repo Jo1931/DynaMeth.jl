@@ -3,7 +3,7 @@ function setCstrCons(model, xt, y, y_i, reac::Reactor)
     n_0 = y_i[9]
     Tc = y_i[10]
     reflux = reac.properties.reflux
-    Trec = cstr.properties.Trec
+    Trec = reac.properties.Trec
 
     RHS = calcRHSJumpFpo(model, y, Tc, reac)
     LHS = calcLHSJumpFpo(model, y, reac)
