@@ -15,7 +15,7 @@ It provides the core functions used to generate the results presented in the fol
 
 - **Leipold, J., and A. Kienle.** *Nonlinear Behavior of Methanol Synthesis through CO2-Hydrogenation.* Chemical Engineering Journal 522 (October 2025): 167176. https://doi.org/10.1016/j.cej.2025.167176.
 
-- **Kaps, L., W. Kortuz, J. Leipold, et al.** *Forced Periodic Reactor Operation Applied to Methanol Synthesis.* ChemCatChem n/a, no. n/a (n.d.): e01403. https://doi.org/10.1002/cctc.202501403.
+- **Kaps, L., W. Kortuz, J. Leipold, et al.** *Forced Periodic Reactor Operation Applied to Methanol Synthesis.* ChemCatChem 18, no. 2 (January 2026): e01403. https://doi.org/10.1002/cctc.202501403.
 
 ## Installation
 
